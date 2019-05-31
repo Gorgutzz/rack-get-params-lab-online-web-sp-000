@@ -22,6 +22,9 @@ class Application
         @@cart.each{|item| resp.write "#{item}\n"}
       end
     elsif req.path.match(/add/)
+      item = req.params["item"]
+      if @@items.include?(item)
+        @@cart << item
 
 
     else
